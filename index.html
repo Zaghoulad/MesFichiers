@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CRUD Restaurant avec VueJS</title>
+
+    <script src="lib/vue.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <!--L'ajout-->
+            <table >
+                    <tr>
+                        <td>Nom</td>
+                        <td><input type="text" placeholder="nom" v-model="nom"></td>
+                    </tr>
+                    <tr>
+                           <td>Type</td>
+                           <td><input type="text" placeholder="type de cuisine" v-model="cuisine"></td>
+                   </tr>
+                   <tr>
+                           <td></td>
+                           <td> <button v-on:click="addRestaurant">Ajouter</button></td>
+                   </tr>    
+               </table>
+        <!---->
+        <br>       
+        <h2  >Liste des Restaurants :     </h2>
+        <div ><input type="text" v-model="input">
+           
+            <button  v-on:click="getDataFromWebService()">Rechercher</button><br></div>
+        
+      
+       
+                <div >
+        <table>
+                <head>
+                <tr>
+                <th></th>
+                <th>Nom Restaurant</th>
+                <th>cuisine</th>
+                <th>Modification</th>
+                <th>Suppression</th>
+                </tr>
+                </head>   
+                
+                <tr v-for="(restaurant, index) in restaurants" >
+                        <td>{{index}}</td>
+                        <td >
+                                {{restaurant.name}}
+                        </td>
+                        <td>
+                                {{restaurant.cuisine}}
+                        </td>
+                        <td>
+                            <button v-on:click="rendrevisible(restaurant)">Modifier</button>    
+                        </td>
+                        <td>
+                            <button v-on:click="supprimerRestaurant(restaurant)">supprimer</button>    
+                        </td>
+                 </tr>
+            
+                
+                   
+                </table>
+                </div>
+                <br><br>
+                <label>Changer le nombre d'enregistrement par page : </label><input type="text" placeholder="10" v-model="pagesize" v-on:change="getDataFromWebService()">
+                <!--Pagination-->
+                <div class="nav">
+                        <button  v-on:click="pagePrecedente()">previous</button>   
+						page {{page}} of {{count}}
+                        <button  v-on:click="pageSuivante()">next</button>
+                </div>
+                <!---->
+                <br><br><br><br><br>   
+            </div>
+            <div >
+                <table>
+                    <tr>
+                        <td>Nom</td>
+                        <td><input type="text"  v-model="nnom" v-bind:value="nnom" ></td>
+                    </tr>
+                    <tr>
+                           <td>Type</td>
+                           <td><input type="text" v-model="ncuisine" v-bind:value="ncuisine"></td>
+                   </tr>
+                   <tr>
+                           <td></td>
+                           <td> <button v-on:click="modifierRestaurant()">Modifier</button></td>
+                   </tr>    
+               </table>
+            </div>
+        </div>   
+    </div>
+</body>
+
+</html>

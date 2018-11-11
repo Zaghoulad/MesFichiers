@@ -1,0 +1,105 @@
+h2 {
+    color:rgb(63, 0, 100);
+
+}
+#recdiv button {
+
+    width: 10%;
+    background-color:rgb(126, 22, 224);;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#recdiv  input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+html {height:100%;}
+body {height:100%;}
+#container
+{
+    height:100%;
+}
+
+#first
+{ 
+    float: left;
+    width:50%;
+    height:100%;
+
+}
+#second
+{
+    float: right;
+    width:50%;
+    height:100%;
+}
+#second table{
+    margin-left: 15%;
+    position: fixed;
+}
+.second  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.second button{
+    width: 100%;
+    background-color:rgb(126, 22, 224);;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.second button:hover {
+    background-color:rgb(154, 124, 182);
+}
+
+.tab table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tab th,.tab td {
+    text-align: left;
+    padding: 5px;
+}
+
+.tab th {
+    background-color: rgb(126, 22, 224);
+    color: white;
+    width: 30%;
+}
+.tab tr:hover {
+    background-color: rgb(157, 146, 146);   
+}
+.tab img {
+width: 60%
+}
+.tab button {
+    width: 50%;
+    background-color: #fff;
+    border: none;
+}
+.nav img{
+    width: 5%;
+}
+.nav button{
+    width: 30%;
+    margin: 10px;
+}
